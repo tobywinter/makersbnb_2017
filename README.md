@@ -62,3 +62,10 @@ So I don’t get confused by leftover requests once I have selected one to appro
 I want to decline a request to hire
 ```
 
+**Approach**
+
+For this project we plan to use:
+Waffle for project management
+Sinatra for our controller with erb views
+Ruby models
+JavaScript and React to implement interactive elements to our user interface
