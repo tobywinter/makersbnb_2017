@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/tobywinter/makersbnb_2017.png?label=ready&title=Ready)](https://waffle.io/tobywinter/makersbnb_2017?utm_source=badge)
 **Makersbnb**
 
 **Any signed up user can list a new space**
