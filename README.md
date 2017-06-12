@@ -1,4 +1,4 @@
-#Makersbnb
+# Makersbnb
 
 [![Stories in Ready](https://badge.waffle.io/tobywinter/makersbnb_2017.png?label=ready&title=Ready)](https://waffle.io/tobywinter/makersbnb_2017?utm_source=badge)
 
@@ -62,7 +62,7 @@ So I don’t get confused by leftover requests once I have selected one to appro
 I want to decline a request to hire
 ```
 
-###Approach
+### Approach
 
 **For this project we plan to use:**
 
