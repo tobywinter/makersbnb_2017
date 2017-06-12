@@ -58,3 +58,5 @@ As user(host)
 So I don’t get confused by leftover requests once I have selected one to approve
 I want to decline a request to hire
 ```
+
+[![Stories in Ready](https://badge.waffle.io/tobywinter/makersbnb_2017.png?label=ready&title=Ready)](http://waffle.io/tobywinter/makersbnb_2017)
