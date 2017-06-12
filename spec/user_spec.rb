@@ -1,6 +1,6 @@
 require_relative '../app/models/user.rb'
 describe User do
-  subject(:user) { described_class.new('user@test.com', 'password') }
+  subject(:user) { User.create(email:'user@test.com', password:'password') }
 
   it 'has an email and password' do
     expect(user.email).to eq('user@test.com')

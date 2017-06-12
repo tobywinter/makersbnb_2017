@@ -1,7 +1,10 @@
 class User
+  include DataMapper::Resource
+
   attr_reader :email, :password
-  def initialize(email, password)
-    @email = email
-    @password = password
-  end
+
+  property :id,               Serial
+  property :email,            String
+  property :password,         String
+
 end
