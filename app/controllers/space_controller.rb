@@ -1,9 +1,5 @@
 class MakersBnB < Sinatra::Base
 
-  get '/' do
-    'Hello makers bnb'
-  end
-
   get '/spaces' do
     @spaces = Space.all
     p @spaces
@@ -17,13 +13,13 @@ class MakersBnB < Sinatra::Base
                       max_capacity: params[:max_capacity],
                       available_from_date: params[:available_from_date],
                       available_to_date: params[:available_to_date])
-
     p @space
+
     redirect to '/spaces'
   end
 
   get '/spaces/new' do
-    erb :'/spaces/new'
+    erb :'spaces/new'
   end
 
 end

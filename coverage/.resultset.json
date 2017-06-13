@@ -11,7 +11,42 @@
         1,
         1,
         1,
+        1,
+        1,
         null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/dominicmcdonnell/Desktop/Walter/Projects/Week_6/makersbnb_2017/spec/features/signup_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/dominicmcdonnell/Desktop/Walter/Projects/Week_6/makersbnb_2017/spec/user_spec.rb": [
+        1,
+        1,
+        2,
+        null,
+        1,
         1,
         1,
         null,
@@ -19,6 +54,6 @@
         null
       ]
     },
-    "timestamp": 1497351794
+    "timestamp": 1497362746
   }
 }

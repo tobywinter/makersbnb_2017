@@ -1,9 +1,7 @@
 <section>
 <h2> Latest Spaces </h2>
-<% if @spaces %>
-<ul id='spaces'>
+<ul id="spaces">
   <% @spaces.each do |space| %>
-  <article>
     <li>
       <strong>Space <%= space.name %></strong>
         <br/>
@@ -12,8 +10,6 @@
         <span class='rwd-line'>  <%= space.rate %> </span>
         <br/>
     </li>
-  </article><br/>
   <% end %>
 </ul>
-<% end %>
 </section>
