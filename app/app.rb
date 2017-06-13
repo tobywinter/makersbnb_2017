@@ -13,7 +13,7 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/' do
-    @user_email = current_user.email
+    current_user
     erb :index
   end
 
