@@ -2,7 +2,6 @@ class MakersBnB < Sinatra::Base
 
   get '/spaces' do
     @spaces = Space.all
-    p @spaces
     erb :'spaces/index'
   end
 
@@ -13,7 +12,6 @@ class MakersBnB < Sinatra::Base
                       max_capacity: params[:max_capacity],
                       available_from_date: params[:available_from_date],
                       available_to_date: params[:available_to_date])
-    p @space
 
     redirect to '/spaces'
   end
