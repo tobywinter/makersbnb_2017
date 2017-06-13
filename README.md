@@ -1,4 +1,4 @@
-**Makersbnb**
+# MakersBnB
 
 [![Stories in Ready](https://badge.waffle.io/tobywinter/makersbnb_2017.png?label=ready&title=Ready)](https://waffle.io/tobywinter/makersbnb_2017?utm_source=badge)
 
@@ -61,4 +61,29 @@ As user(host)
 So I don’t get confused by leftover requests once I have selected one to approve
 I want to decline a request to hire
 ```
+**Once a user has an account, they can log in and log out**
+```
+As a user(either)
+So I can rent or hire spaces as myself online
+I want to log in to my account
 
+As a user(either)
+So that no-one else uses my account to rent or hire spaces
+I want to log out of my account
+```
+
+### Approach
+
+**For this project we plan to use:**
+
+- Waffle for project management
+- Sinatra for our controller with erb views
+- Ruby models
+- JavaScript and React to implement interactive elements to our user interface
+
+*NOTES*
+
+USER STORIES TO ADD
+
+- SIGN IN
+- SIGN OUT
