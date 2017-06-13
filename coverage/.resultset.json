@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/dominicmcdonnell/Desktop/Walter/Projects/Week_6/makersbnb_2017/spec/features/list_a_space_spec.rb": [
+      "/Users/elmo/javascript/makersbnb_2017/spec/features/list_a_space_spec.rb": [
         1,
         1,
         1,
@@ -20,7 +20,41 @@
         null,
         null
       ],
-      "/Users/dominicmcdonnell/Desktop/Walter/Projects/Week_6/makersbnb_2017/spec/features/signup_spec.rb": [
+      "/Users/elmo/javascript/makersbnb_2017/spec/features/list_multiple_spaces_spec.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/elmo/javascript/makersbnb_2017/spec/features/signup_spec.rb": [
         1,
         1,
         1,
@@ -41,7 +75,7 @@
         null,
         null
       ],
-      "/Users/dominicmcdonnell/Desktop/Walter/Projects/Week_6/makersbnb_2017/spec/user_spec.rb": [
+      "/Users/elmo/javascript/makersbnb_2017/spec/user_spec.rb": [
         1,
         1,
         2,
@@ -54,6 +88,6 @@
         null
       ]
     },
-    "timestamp": 1497362746
+    "timestamp": 1497365009
   }
 }
