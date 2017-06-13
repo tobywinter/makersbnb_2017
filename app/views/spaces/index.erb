@@ -1,14 +1,18 @@
 <section>
 <h2> Latest Spaces </h2>
 <ul id="spaces">
-  <% @spaces.each do |space| %>
+  <% @spaces.each_with_index do |space, index| %>
     <li>
+      <form action="/spaces/#{index}" method="post">
+        
       <strong>Space <%= space.name %></strong>
         <br/>
-      <span class='rwd-line'>  <%= space.description %> </span>
+        <span class='rwd-line'>  <%= space.description %> </span>
         <br/>
-        <span class='rwd-line'>  <%= space.rate %> </span>
+        <span class='rwd-line'> £ <%= space.rate %> </span>
         <br/>
+        <button type='submit' value='Submit'>Update Space</button>
+        </form>
     </li>
   <% end %>
 </ul>
