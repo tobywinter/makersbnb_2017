@@ -3,8 +3,8 @@ class User
 
   attr_reader :email, :password
 
-  property :id,               Serial
-  property :email,            String
-  property :password,         String
-
+  property :id,                     Serial
+  property :email,                  String
+  property :password,               String
+  property :password_confirmation,  String
 end
