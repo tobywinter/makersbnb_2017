@@ -7,4 +7,7 @@ class User
   property :email,                  String
   property :password,               String
   property :password_confirmation,  String
+
+  validates_confirmation_of :password
+
 end

@@ -35,6 +35,13 @@
         1,
         1,
         null,
+        null,
+        1,
+        2,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/lubosmich/Projects/makersbnb_2017/spec/user_spec.rb": [
@@ -50,6 +57,6 @@
         null
       ]
     },
-    "timestamp": 1497365827
+    "timestamp": 1497367542
   }
 }
