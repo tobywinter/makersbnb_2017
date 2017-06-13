@@ -19,4 +19,14 @@ feature "Sign Up" do
       expect(page).to have_content 'Password does not match the confirmation'
     end
 
+    scenario 'email is required to submit the form and create a user' do
+    expect { sign_up(email: nil) }.not_to change(User, :count)
+    expect(page).to have_content('Email must not be blank')
+  end
+
+  scenario 'email must be in proper format' do
+    expect { sign_up(email: 'user@test') }.not_to change(User, :count)
+    expect(page).to have_content('Email has an invalid format')
+  end
+
 end
