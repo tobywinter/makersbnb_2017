@@ -1,7 +1,11 @@
 ENV['RACK_ENV'] ||= 'development'
-require 'sinatra/base'
 
+
+require 'sinatra/base'
 require_relative 'data_mapper_setup'
+require_relative 'app_controller'
+require_relative 'controllers/space_controller'
+
 
 class MakersBnB < Sinatra::Base
   enable :sessions
@@ -30,3 +34,4 @@ class MakersBnB < Sinatra::Base
   end
 
 end
+
