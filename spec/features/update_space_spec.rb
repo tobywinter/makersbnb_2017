@@ -14,9 +14,11 @@ feature 'update space' do
     within 'ul#spaces' do
       expect(page).to have_content('One')
     end
+     
+    space = Space.first(:name => 'One')
       
     find_button('Update Space').click 
-    expect(current_path).to eq('/spaces/1')
+    expect(current_path).to eq('/spaces/One')
       
     fill_in('name', with: 'Three')
     click_button('List my Space')

@@ -5,13 +5,13 @@
     <li>
       <form action="/spaces/#{index}" method="post">
         
-      <strong>Space <%= space.name %></strong>
+      <strong name='space_name'>Space <%= space.name %></strong>
         <br/>
         <span class='rwd-line'>  <%= space.description %> </span>
         <br/>
         <span class='rwd-line'> £ <%= space.rate %> </span>
         <br/>
-        <button type='submit' value='Submit'>Update Space</button>
+        <button type='submit' value='Submit' name='update_space'>Update Space</button>
         </form>
     </li>
   <% end %>

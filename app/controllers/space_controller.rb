@@ -19,5 +19,11 @@ class MakersBnB < Sinatra::Base
   get '/spaces/new' do
     erb :'spaces/new'
   end
+    
+  get '/spaces/:name' do
+    space = Space.first(name: params[:name])
+    @space = space ? space.name : []
+    erb :'spaces/update'
+  end
 
 end
