@@ -9,4 +9,7 @@
 <span class='rwd-line'> Available from: <%= @space.available_from_date.strftime('%D')%> </span>
 </br>
 <span class='rwd-line'> Available to:   <%= @space.available_to_date.strftime('%D') %> </span>
-</br>
+</br></br>
+<form method='get' action='/spaces/<%= session[:id] %>/update'>
+  <button type="submit" name="submit" value="Edit Space">Edit Space</button>
+</form>
