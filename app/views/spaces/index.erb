@@ -3,12 +3,15 @@
 <ul id="spaces">
   <% @spaces.each do |space| %>
     <li>
-      <strong>Space <%= space.name %></strong>
+        <span class='rwd-line'>  <%= space.id %> </span>
+      <strong name='name'>Space <%= space.name %></strong>
         <br/>
-      <span class='rwd-line'>  <%= space.description %> </span>
+
+        <span class='rwd-line'>  <%= space.description %> </span>
         <br/>
-        <span class='rwd-line'>  <%= space.rate %> </span>
+        <span class='rwd-line'> £ <%= space.rate %> </span>
         <br/>
+        <%= "<a href=\"spaces/#{space.id}\"> See Space</a>" %>
     </li>
   <% end %>
 </ul>
