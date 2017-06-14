@@ -7,6 +7,7 @@ require 'rspec'
 require 'simplecov'
 require 'simplecov-console'
 require './app/app'
+require 'helpers/session'
 
 require 'helpers/spaces'
 
@@ -40,5 +41,20 @@ RSpec.configure do |config|
     puts "\e[33mTry it now! Just run: rubocop\e[0m"
   end
   config.include Capybara::DSL # good
+
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.clean_with(:truncation)
+  end
+
+  config.before(:each) do
+    DatabaseCleaner.start
+  end
+
+  config.include SessionHelpers
+
+  config.after(:each) do
+    DatabaseCleaner.clean
+  end
 
 end
