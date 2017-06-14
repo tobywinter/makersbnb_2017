@@ -5,6 +5,7 @@ require 'sinatra/base'
 require 'sinatra/flash'
 
 require_relative 'app_controller'
+require_relative 'controllers/user_controller'
 require_relative 'controllers/space_controller'
 
 
@@ -40,5 +41,4 @@ class MakersBnB < Sinatra::Base
       erb :'users/index'
     end
   end
-
 end
