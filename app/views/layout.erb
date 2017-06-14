@@ -5,7 +5,15 @@
     <title>MakersBnB</title>
   </head>
   <body>
-    Welcome <%= @current_user ? @current_user.email : "guest" %>
+    <% if current_user %>
+      Welcome <%= current_user.email %>
+      <form action="/sessions" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="Sign Out">
+      </form>
+    <% else %>
+      Welcome guest
+    <% end %>
 
 
 
