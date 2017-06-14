@@ -29,4 +29,9 @@ feature "Sign Up" do
     expect(page).to have_content('Email has an invalid format')
   end
 
+  scenario 'user must use a unique email to sign up' do
+    sign_up
+    expect { sign_up }.not_to change(User, :count)
+    expect(page).to have_content('Email is already taken')
+  end
 end

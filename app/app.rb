@@ -24,6 +24,7 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/users/new' do
+    @user = User.new
     erb :'users/index'
   end
 
