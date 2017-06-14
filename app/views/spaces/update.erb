@@ -1,10 +1,11 @@
 <form action='/spaces/<%= session[:id] %>/update' method="post">
 <h2>Update <%= @space.name %></h2>
-  name: <input name="name" value="<%= @space.name %>"><br/>
-  description: <input name="description" value="<%= @space.description %>"><br/>
-  rate: <input name="rate" value="<%= @space.rate %>"><br/>
-  available from: <input name="available_from_date" value="<%= @space.available_from_date.strftime('%D') %>"><br/>
-  available to: <input name="available_to_date" value="<%= @space.available_to_date.strftime('%D') %>"><br/><br/>
+  Name: <input name="name" value="<%= @space.name %>"><br/>
+  Description: <input name="description" value="<%= @space.description %>"><br/>
+  Rate per night: <input name="rate" value="<%= @space.rate %>"><br/>
+  Max capacity: <input name="max_capacity" value="<%= @space.max_capacity %>"><br/>
+  Available from: <input name="available_from_date" value="<%= @space.available_from_date.strftime('%D') %>"><br/>
+  Available to: <input name="available_to_date" value="<%= @space.available_to_date.strftime('%D') %>"><br/><br/>
   
   <button type="submit" name="submit" value="Update my Space">Update my Space</button>
 </form>
