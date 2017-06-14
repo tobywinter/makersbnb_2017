@@ -21,7 +21,20 @@
         null
       ],
       "/Users/tjhasler-winter/Projects/group-projects/makersbnb_2017/spec/features/signin_spec.rb": [
-
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        0,
+        null,
+        null,
+        null
       ],
       "/Users/tjhasler-winter/Projects/group-projects/makersbnb_2017/spec/features/signup_spec.rb": [
         1,
@@ -75,6 +88,6 @@
         null
       ]
     },
-    "timestamp": 1497434987
+    "timestamp": 1497435950
   }
 }
