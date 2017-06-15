@@ -1,9 +1,8 @@
 class MakersBnB < Sinatra::Base
 
   get '/spaces' do
-    current_user
     @spaces = Space.all
-    erb :'spaces/index'
+    erb :'/spaces/index'
   end
 
   post '/spaces' do
@@ -19,18 +18,43 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/spaces/new' do
+
     redirect to '/sessions/new' unless current_user
     erb :'spaces/new'
   end
 
   get '/spaces/:id' do
     @space = Space.first(id: params[:id])
-    erb :'spaces/space'
+    session[:id] = params[:id]
+    erb :'/spaces/space'
+  end
+  
+  get '/spaces/:id/update' do
+    @space = Space.get(session[:id])
+    erb :'/spaces/update'
   end
 
-  get '/spaces/:id/update' do
-    space = Space.first(id: params[:id])
-    erb :'spaces/update'
+  post '/spaces/:id/update' do
+    session[:name] = params[:name]
+    session[:description] = params[:description]
+    session[:rate] = params[:rate]
+    session[:max_capacity] = params[:max_capacity]
+    session[:available_from_date] = params[:available_from_date]
+    session[:available_to_date] = params[:available_to_date]
+
+    @id = session[:id].to_i
+   
+    @space = Space.get(@id)
+    @space.update(:name => session[:name],
+                          :description => session[:description],
+                          :rate => session[:rate].to_i,
+                          :max_capacity => session[:max_capacity].to_i,
+                          :available_from_date => session[:available_from_date],
+                          :available_to_date => session[:available_to_date])
+    if @space.save
+      p 'saved after update'
+    end
+    redirect to "/spaces/#{@id}"
   end
 
 end

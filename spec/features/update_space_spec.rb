@@ -1,7 +1,5 @@
-feature 'view space' do
-  scenario 'host want to view a space' do
-    sign_up
-    sign_in
+feature 'update space' do
+  scenario 'host want to update the current space' do
 
     visit('/spaces/new')
     fill_in('name', with: 'One')
@@ -20,7 +18,19 @@ feature 'view space' do
     end
 
     first(:link, 'See Space').click
-    expect(current_path).not_to eq('/spaces/2')
+      
+    expect(current_path).to eq('/spaces/4')
     expect(page).to have_content('One')
+      
+    click_button('Edit Space')
+    expect(current_path).to eq('/spaces/4/update')
+    
+    fill_in('description', with: 'Shoe Box')
+    fill_in('rate', with: 100)  
+      
+    click_button('Update my Space')
+    expect(current_path).to eq('/spaces/4')
+    expect(page).to have_content('Shoe Box')
+      
   end
 end
