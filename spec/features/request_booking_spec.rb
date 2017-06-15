@@ -25,6 +25,7 @@ feature 'Requesting booking' do
     click_button('Submit request')
     expect(current_path).to eq ('/booking')
     expect(page).to have_content('Thank you! Your request will be reviewed by the host!')
+    expect(Booking.count).to eq(1)
   end
 
 end

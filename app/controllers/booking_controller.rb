@@ -9,7 +9,7 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/booking' do
-    # Booking.create(request_from_date: params[request_from_date], request_to_date: params[request_to_date])
+    @booking = Booking.create(from_date: params[:request_from_date], to_date: params[:request_to_date])
     redirect to '/booking'
   end
 
