@@ -9,3 +9,7 @@
   
   <button type="submit" name="submit" value="Update my Space">Update my Space</button>
 </form>
+
+<form action='/spaces/<%= session[:id] %>'>
+  <button type='submit'>Discard my changes</button>
+</form>
