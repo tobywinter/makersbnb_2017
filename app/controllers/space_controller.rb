@@ -18,12 +18,12 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/spaces/new' do
+    redirect to '/sessions/new' unless current_user
     erb :'spaces/new'
   end
 
   get '/spaces/:id' do
     @space = Space.first(id: params[:id])
-    # @space = space ? space.name : []
     erb :'spaces/space'
   end
 

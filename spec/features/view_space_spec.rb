@@ -1,5 +1,7 @@
 feature 'update space' do
   scenario 'host want to update a space' do
+    sign_up
+    sign_in
 
     visit('/spaces/new')
     fill_in('name', with: 'One')
