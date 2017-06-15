@@ -6,6 +6,8 @@ class User
   attr_reader  :password
   attr_accessor :password_confirmation
 
+  has n, :spaces
+
   property :id, Serial
   property :email, String, required: true, format: :email_address, unique: true
   property :password_digest, Text, required: true
