@@ -1,5 +1,7 @@
 feature 'list a space' do
-  scenario 'host want to list a new space' do
+  scenario 'when signed in' do
+    sign_up
+    sign_in
     visit('/spaces/new')
     fill_in('name', with: 'One')
     fill_in('description', with: 'Lovely little studio to swing a cat')
@@ -13,5 +15,11 @@ feature 'list a space' do
     within 'ul#spaces' do
       expect(page).to have_content('One')
     end
+  end
+
+  scenario 'not able to list space when not signed in' do
+    visit('/spaces/new')
+    expect(current_path).to eq ('/sessions/new')
+    expect(page).to have_content('Please sign in')
   end
 end

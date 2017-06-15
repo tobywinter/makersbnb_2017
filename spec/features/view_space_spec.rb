@@ -1,5 +1,7 @@
 feature 'view space' do
   scenario 'host want to view a space' do
+    sign_up
+    sign_in
 
     visit('/spaces/new')
     fill_in('name', with: 'One')

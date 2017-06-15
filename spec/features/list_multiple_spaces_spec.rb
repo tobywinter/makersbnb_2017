@@ -1,5 +1,7 @@
 feature 'list multiple spaces' do
   scenario 'host want to list new spaces' do
+    sign_up
+    sign_in
       
     visit('/spaces/new')
     fill_in('name', with: 'One')
@@ -20,13 +22,13 @@ feature 'list multiple spaces' do
     fill_in('available_to_date', with: '08/07/2017')
     click_button('List my Space')
     expect(current_path).to eq('/spaces')
-      
+
     within 'ul#spaces' do
       expect(page).to have_content('One')
       expect(page).to have_content('Two')
     end
   end
-    
-    
-    
+
+
+
 end
