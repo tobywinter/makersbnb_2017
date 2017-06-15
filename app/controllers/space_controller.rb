@@ -28,7 +28,6 @@ class MakersBnB < Sinatra::Base
   
   get '/spaces/:id/update' do
     @space = Space.get(session[:id])
-     p __LINE__, @space
     erb :'/spaces/update'
   end
 
@@ -41,16 +40,17 @@ class MakersBnB < Sinatra::Base
     session[:available_to_date] = params[:available_to_date]
 
     @id = session[:id].to_i
-        p __LINE__, session, @id
+   
     @space = Space.get(@id)
     @space.update(:name => session[:name],
                           :description => session[:description],
-                          :rate => session[:rate],
-                          :max_capacity => session[:max_capacity],
+                          :rate => session[:rate].to_i,
+                          :max_capacity => session[:max_capacity].to_i,
                           :available_from_date => session[:available_from_date],
                           :available_to_date => session[:available_to_date])
-    p __LINE__, @space
-    @space.save
+    if @space.save
+      p 'saved after update'
+    end
     redirect to "/spaces/#{@id}"
   end
 

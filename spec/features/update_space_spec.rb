@@ -22,14 +22,14 @@ feature 'update space' do
     expect(current_path).to eq('/spaces/4')
     expect(page).to have_content('One')
       
-    click_button('Update space')
-    expect(current_path).to eq('/spaces/4')
+    click_button('Edit Space')
+    expect(current_path).to eq('/spaces/4/update')
     
     fill_in('description', with: 'Shoe Box')
     fill_in('rate', with: 100)  
       
     click_button('Update my Space')
-    expect(current_path).to eq('/spaces')
+    expect(current_path).to eq('/spaces/4')
     expect(page).to have_content('Shoe Box')
       
   end
