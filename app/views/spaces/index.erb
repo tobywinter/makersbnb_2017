@@ -10,7 +10,7 @@
 <ul id="spaces">
   <% @spaces.each do |space| %>
     <li>
-        <span class='rwd-line'>  <%= space.id %> </span>
+        
       <strong name='name'>Space <%= space.name %></strong>
         <br/>
 
@@ -18,7 +18,7 @@
         <br/>
         <span class='rwd-line'> £ <%= space.rate %> </span>
         <br/>
-        <%= "<a href=\"spaces/#{space.id}\"> See Space</a>" %>
+        <%= "<a href=\"spaces/#{space.id}\" style=\"background-color:lightgreen\"> See Space</a>" %>
     </li>
   <% end %>
 </ul>
