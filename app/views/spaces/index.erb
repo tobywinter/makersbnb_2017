@@ -1,9 +1,16 @@
 <section>
 <h2> Latest Spaces </h2>
+  
+<br/>
+<form method='get' action='/spaces/new'>
+  <button type="submit" name="submit" value="add_space">Add Space</button>
+</form>
+<br/><br/>
+  
 <ul id="spaces">
   <% @spaces.each do |space| %>
     <li>
-        <span class='rwd-line'>  <%= space.id %> </span>
+        
       <strong name='name'>Space <%= space.name %></strong>
         <br/>
 
@@ -11,7 +18,7 @@
         <br/>
         <span class='rwd-line'> £ <%= space.rate %> </span>
         <br/>
-        <%= "<a href=\"spaces/#{space.id}\"> See Space</a>" %>
+        <%= "<a href=\"spaces/#{space.id}\" style=\"background-color:lightgreen\"> See Space</a>" %>
     </li>
   <% end %>
 </ul>
