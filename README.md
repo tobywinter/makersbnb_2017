@@ -24,6 +24,7 @@ Contributors to this repo:
 
 **Future actions - if more time were available**
 - JavaScript and React to implement interactive elements to our user interface
+- Mailgun API for email notifications upon action completions (e.g. booking confirmation)
 
 ## Specification
 
@@ -108,3 +109,21 @@ As a user(either)
 So that no-one else uses my account to rent or hire spaces
 I want to log out of my account
 ```
+
+## Usage Instructions
+* clone the repo and run bundle
+```shell
+$ git clone https://github.com/samjones1001/makersbnb
+$ cd makersbnb
+$ rvm 2.4.0
+$ bundle install
+```
+* run tests
+```shell
+$ rspec
+```
+* start up sinatra
+```shell
+$ rackup -p 4567
+```
+* in your browser, navigate to http://localhost:4567/
