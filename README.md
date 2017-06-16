@@ -1,7 +1,44 @@
 # MakersBnB
 
-[![Stories in Ready](https://badge.waffle.io/tobywinter/makersbnb_2017.png?label=ready&title=Ready)](https://waffle.io/tobywinter/makersbnb_2017?utm_source=badge)
+The first experience of a group project at Makers Academy (Week 6).
 
+Contributors to this repo:
+
+- Dom McDonnell [@dmcd84](https://github.com/dmcd84)
+- Elena Morton [@elenamorton](https://github.com/elenamorton)
+- Lubos Michalic [@lubosmichalic](https://github.com/lubosmichalic)
+- Toby Hasler-Winter [@tobywinter](https://github.com/tobywinter)
+
+## Approach
+
+**For this project we plan to use:**
+
+- AGILE methodologies and XP values
+
+**Technologies**
+- Waffle.io for project management
+- Github(obviously!)
+- Sinatra for our controller with erb views
+- Ruby models
+
+
+**Future actions - if more time were available**
+- JavaScript and React to implement interactive elements to our user interface
+
+## Specification
+
+We would like a web application that allows users to list spaces they have available, and to hire spaces for the night.
+Headline specifications
+
+ * Any signed-up user can list a new space.
+ * Users can list multiple spaces.
+ * Users should be able to name their space, provide a short description of the space, and a price per night.
+ * Users should be able to offer a range of dates where their space is available.
+ * Any signed-up user can request to hire any space for one night, and this should be approved by the user that owns that space.
+ * Nights for which a space has already been booked should not be available for users to book that space.
+ * Until a user has confirmed a booking request, that space can still be booked for that night.
+
+ ### User stories the team extracted from the Specification:
 
 **Any signed up user can list a new space**
 ```
@@ -71,19 +108,3 @@ As a user(either)
 So that no-one else uses my account to rent or hire spaces
 I want to log out of my account
 ```
-
-### Approach
-
-**For this project we plan to use:**
-
-- Waffle for project management
-- Sinatra for our controller with erb views
-- Ruby models
-- JavaScript and React to implement interactive elements to our user interface
-
-*NOTES*
-
-USER STORIES TO ADD
-
-- SIGN IN
-- SIGN OUT
