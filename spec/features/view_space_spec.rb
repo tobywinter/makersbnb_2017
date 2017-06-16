@@ -21,4 +21,8 @@ feature 'view space' do
     expect(current_path).not_to eq('/spaces/Space.all[-1].id')
     expect(page).to have_content('One')
   end
+
+  scenario 'guest wants to view spaces available within specified dates' do
+
+  end
 end
