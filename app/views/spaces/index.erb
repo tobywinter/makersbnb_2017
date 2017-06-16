@@ -1,16 +1,33 @@
 <section>
 <h2> Latest Spaces </h2>
-  
+
 <br/>
+<form action='/spaces/search' method="post">
+  Available from
+  <label for="search_available_from">
+    <input type="date" name="search_available_from" required>
+  </label>
+</br>
+  Available to
+  <label for="asearch_available_to">
+    <input type="date" name="asearch_available_to" required>
+  </label>
+</br>
+
+  <button type='submit'>Find Spaces</button>
+</form>
+
+<br/><br/>
+
 <form method='get' action='/spaces/new'>
   <button type="submit" name="submit" value="add_space">Add Space</button>
 </form>
 <br/><br/>
-  
+
 <ul id="spaces">
   <% @spaces.each do |space| %>
     <li>
-        
+
       <strong name='name'>Space <%= space.name %></strong>
         <br/>
 
