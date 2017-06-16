@@ -1,7 +1,6 @@
 class MakersBnB < Sinatra::Base
 
   get '/spaces' do
-    # p session[:space_id_array]
     if session[:space_id_array]
       @spaces = session[:space_id_array].map do |space_id|
         Space.get(space_id)
@@ -30,6 +29,7 @@ class MakersBnB < Sinatra::Base
 
   post '/spaces/search' do
     search_available_spaces(params[:search_available_from])
+    session[:search_available_from] = params[:search_available_from]
     redirect to '/spaces'
   end
 

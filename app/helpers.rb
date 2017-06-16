@@ -5,17 +5,19 @@ module Helpers
   end
 
   def search_available_spaces(date_from)
-    p __LINE__, date_from
+    date = Date.parse(date_from)
     available_spaces = []
-    AvailableDates.all(:available_from_date.gte => date_from).each do |space|
-      # p space
-      available_spaces << space.space_id
+    AvailableDates.all.each do |space|
+      available_spaces << space
     end
-    p __LINE__, available_spaces
-
-    if !available_spaces.empty?
-      session[:space_id_array] = available_spaces.uniq
+    spaces_ids = []
+    available_spaces.each do |space|
+      if (space.available_from_date <= date)
+        spaces_ids << space.space_id
+      end
     end
-    # p session[:space_id_array]
+    if !spaces_ids.empty?
+      session[:space_id_array] = spaces_ids.uniq
+    end
   end
 end

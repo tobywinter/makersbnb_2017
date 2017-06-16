@@ -29,7 +29,7 @@ feature 'view space' do
     visit('/spaces/new')
     create_space(name: 'OneSearch')
     visit('/spaces/new')
-    create_space(name: 'TwoSearch', available_from_date: '01/01/2017', available_to_date: '30/06/2017')
+    create_space(name: 'TwoSearch', available_from_date: '01/08/2017', available_to_date: '30/08/2017')
     fill_in('search_available_from', with: '01/07/2017')
     fill_in('search_available_to', with: '31/07/2017')
     click_button('Find Spaces')

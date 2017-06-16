@@ -1,5 +1,4 @@
 <section>
-<h2> Latest Spaces </h2>
 
 <br/>
 <form action='/spaces/search' method="post">
@@ -20,10 +19,12 @@
 <br/><br/>
 
 <form method='get' action='/spaces/new'>
-  <button type="submit" name="submit" value="add_space">Add Space</button>
+  <button type="submit" id="magic_button" name="submit" value="add_space">Add Space</button>
 </form>
 <br/><br/>
-
+<div>
+<h2> Latest Spaces </h2>
+<br/><br/>
 <ul id="spaces">
   <% @spaces.each do |space| %>
     <li>
@@ -39,4 +40,12 @@
     </li>
   <% end %>
 </ul>
+<script>
+  $(document).ready(function(){
+  $('#magic_button').on('click', function(){
+    $('spaces').empty();
+  });
+}):
+</script>
+</div>
 </section>
