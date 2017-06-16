@@ -8,7 +8,7 @@ require_relative 'app_controller'
 require_relative 'controllers/user_controller'
 require_relative 'controllers/space_controller'
 require_relative 'controllers/sessions_controller'
-
+require_relative 'controllers/booking_controller'
 
 class MakersBnB < Sinatra::Base
   enable :sessions

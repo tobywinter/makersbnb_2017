@@ -1,6 +1,7 @@
 module SpaceHelpers
 
-  def enter_generic_details
+  def create_space(name: 'One')
+    fill_in('name', with: name)
     fill_in('description', with: 'Lovely little studio to swing a cat')
     fill_in('rate', with: 90)
     fill_in('max_capacity', with: 3)

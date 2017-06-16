@@ -8,7 +8,6 @@ require 'simplecov'
 require 'simplecov-console'
 require './app/app'
 require 'helpers/session'
-
 require 'helpers/spaces'
 
 Capybara.app = MakersBnB

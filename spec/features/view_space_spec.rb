@@ -4,15 +4,13 @@ feature 'view space' do
     sign_in
 
     visit('/spaces/new')
-    fill_in('name', with: 'One')
-    enter_generic_details
+    create_space
 
     within 'ul#spaces' do
       expect(page).to have_content('One')
     end
     visit('/spaces/new')
-    fill_in('name', with: 'Two')
-    enter_generic_details
+    create_space(name: 'Two')
 
     within 'ul#spaces' do
       expect(page).to have_content('One')
@@ -20,7 +18,7 @@ feature 'view space' do
     end
 
     first(:link, 'See Space').click
-    expect(current_path).not_to eq('/spaces/2')
+    expect(current_path).not_to eq('/spaces/Space.all[-1].id')
     expect(page).to have_content('One')
   end
 end
