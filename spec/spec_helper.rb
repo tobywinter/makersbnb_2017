@@ -9,6 +9,7 @@ require 'simplecov-console'
 require './app/app'
 require 'helpers/session'
 require 'helpers/spaces'
+require 'helpers/booking'
 
 Capybara.app = MakersBnB
 
@@ -29,7 +30,11 @@ RSpec.configure do |config|
   config.before(:each) do
     DatabaseCleaner.start
   end
+
   config.include SpaceHelpers
+  config.include BookingHelpers
+  config.include SessionHelpers
+  config.include Capybara::DSL # good
   # Everything in this block runs once after each individual test
   config.after(:each) do
     DatabaseCleaner.clean
@@ -39,21 +44,10 @@ RSpec.configure do |config|
     puts "\e[33mHave you considered running rubocop? It will help you improve your code!\e[0m"
     puts "\e[33mTry it now! Just run: rubocop\e[0m"
   end
-  config.include Capybara::DSL # good
 
-  config.before(:suite) do
-    DatabaseCleaner.strategy = :transaction
-    DatabaseCleaner.clean_with(:truncation)
-  end
 
-  config.before(:each) do
-    DatabaseCleaner.start
-  end
 
-  config.include SessionHelpers
 
-  config.after(:each) do
-    DatabaseCleaner.clean
-  end
+
 
 end
