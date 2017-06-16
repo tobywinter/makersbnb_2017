@@ -33,6 +33,7 @@ class MakersBnB < Sinatra::Base
     @booking = Booking.first(id: session[:booking_id])
     @booking.update(hired: true)
     flash.keep[:notice] = 'Booking confirmed!'
+    redirect to 'booking/confirm'
   end
 
 end
