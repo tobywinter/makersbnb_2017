@@ -1,0 +1,16 @@
+<h2><%= @space.name %></h2>
+</br>
+<span class='rwd-line'> Description:    <%= @space.description %> </span>
+</br>
+<span class='rwd-line'> Rate per night: £<%= @space.rate %> </span>
+</br>
+<span class='rwd-line'> Maximum capacity:<%= @space.max_capacity %> </span>
+</br>
+<span class='rwd-line'> Available from: <%= @space.available_from_date.strftime('%D')%> </span>
+</br>
+<span class='rwd-line'> Available to:   <%= @space.available_to_date.strftime('%D') %> </span>
+</br>
+<form action='/spaces'>
+  <button type='submit'>Back to Spaces</button>
+</form>
+Booking: <%= @booking.hired ? "Confirmed" : "Unconfirmed" %>

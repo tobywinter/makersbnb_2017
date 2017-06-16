@@ -16,4 +16,10 @@ class MakersBnB < Sinatra::Base
     redirect to '/booking'
   end
 
+    get '/booking/pending' do
+      @booking = Booking.first(id: session[:booking_id])
+      @space =  Space.first(id: session[:id])
+      erb :'bookings/pending'
+    end
+
 end
