@@ -1,4 +1,7 @@
 <form action='/spaces/<%= session[:id] %>/update' method="post">
+  
+  <input type='hidden' name='space_id' value='<%= @space.id%>'/>
+  
 <h2>Update <%= @space.name %></h2>
   Name: <input type="text" name="name" value="<%= @space.name %>"><br/>
   Description: <input type="text" name="description" value="<%= @space.description %>"><br/>
