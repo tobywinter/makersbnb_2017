@@ -34,14 +34,4 @@ feature 'Confirm Booking' do
     click_button('Confirm')
     expect(page).to have_content ('Booking: Confirmed')
   end
-
-  # scenario 'User(Owner) can view their requested bookings' do
-  #   sign_up
-  #   sign_in
-  #   visit ('/booking/confirm')
-  #   expect(page).to have_content ('Wonderland')
-  #   expect(page).to have_content ('Booking: Unconfirmed')
-  #   click_button('Confirm')
-  #   expect(page).to have_content ('Booking: Confirmed')
-  # end
 end
