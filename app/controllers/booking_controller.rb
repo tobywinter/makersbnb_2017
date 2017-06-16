@@ -16,10 +16,23 @@ class MakersBnB < Sinatra::Base
     redirect to '/booking'
   end
 
-    get '/booking/pending' do
-      @booking = Booking.first(id: session[:booking_id])
-      @space =  Space.first(id: session[:id])
-      erb :'bookings/pending'
-    end
+  get '/booking/pending' do
+    @booking = Booking.first(id: session[:booking_id])
+    @space =  Space.first(id: session[:id])
+    erb :'bookings/pending'
+  end
+
+  get '/booking/confirm' do
+    @booking = Booking.first(id: session[:booking_id])
+    @space =  Space.first(id: session[:id])
+    current_user
+    erb :'bookings/pending'
+  end
+
+  post '/booking/confirm' do
+    @booking = Booking.first(id: session[:booking_id])
+    @booking.update(hired: true)
+    flash.keep[:notice] = 'Booking confirmed!'
+  end
 
 end
