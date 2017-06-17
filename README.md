@@ -113,7 +113,7 @@ I want to log out of my account
 ## Usage Instructions
 * clone the repo and run bundle
 ```shell
-$ git clone https://github.com/samjones1001/makersbnb
+$ git clone https://github.com/tobywinter/makersbnb_2017
 $ cd makersbnb
 $ rvm 2.4.0
 $ bundle install
