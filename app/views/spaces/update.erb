@@ -1,7 +1,7 @@
-<form action='/spaces/<%= session[:id] %>/update' method="post">
-  
+<form action='/spaces/<%= session[:id] %>/update' method="post" style="padding-top: 60px">
+
   <input type='hidden' name='space_id' value='<%= @space.id%>'/>
-  
+
 <h2>Update <%= @space.name %></h2>
   Name: <input type="text" name="name" value="<%= @space.name %>"><br/>
   Description: <input type="text" name="description" value="<%= @space.description %>"><br/>
@@ -9,7 +9,7 @@
   Max capacity: <input type="text" name="max_capacity" value="<%= @space.max_capacity %>"><br/>
   Available from: <input type="date" name="available_from_date" value="<%= @space.available_from_date.strftime('%D') %>"><br/>
   Available to: <input type="date" name="available_to_date" value="<%= @space.available_to_date.strftime('%D') %>"><br/><br/>
-  
+
   <button type="submit" name="submit" value="Update my Space">Update my Space</button>
 </form>
 
